@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You're Invited!</title>
+  <style>
+    body {
+      background: #f7f3f0;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      padding-top: 80px;
+    }
+
+    .swing {
+      display: inline-block;
+      animation: swing 2s infinite ease-in-out;
+      transform-origin: top center;
+    }
+
+    @keyframes swing {
+      0% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      100% { transform: rotate(5deg); }
+    }
+
+    .gift-box {
+      width: 150px;
+      height: 150px;
+      background: #e74c3c;
+      margin: 0 auto;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .gift-box::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 150px;
+      background: #fff;
+      left: 60px;
+      top: 0;
+    }
+
+    .gift-box::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 30px;
+      background: #fff;
+      top: 60px;
+      left: 0;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #2ecc71;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .rsvp-btn:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>You're Invited!</h1>
+  <div class="swing">
+    <div class="gift-box"></div>
+  </div>
+
+  <p>Click the button below to RSVP</p>
+  <a class="rsvp-btn" href="https://forms.gle/your-form-link" target="_blank">RSVP Now</a>
+
+</body>
+</html>
